@@ -6,9 +6,8 @@ class State {
   // of the application state.
   constructor(filePath) {
     this.filePath = filePath;
-    this.notes = [];
+    this.items = [];
     this.categories = [`Category 1`, `Category 2`, `Category 3`, `Category 4`, `Category 5`];
-    this.tasks = [];
 
     // TODO: Any other initialization that you need.
   }

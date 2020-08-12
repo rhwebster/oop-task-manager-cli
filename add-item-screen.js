@@ -93,7 +93,7 @@ class AddItemScreen {
           //       using the variable note
           // TODO: Save the state
           const newNote = new Note(note);
-          this.state.notes.push(newNote);
+          this.state.items.push(newNote);
           const screen = new ManageTasksScreen(this.rl, this.state);
           screen.show();
         });
@@ -106,12 +106,11 @@ class AddItemScreen {
             // TODO: Use the value categoryIndex to get the
             //       name of the category and set the following
             //       value to the category name
-            const categoryName = "";
-
-            this.printTaskUi3(title, categoryIndex);
+            const categoryName = this.state.categories[categoryIndex];
+            this.printTaskUi3(title, categoryName);
             this.rl.question("> ", description => {
               const newTask = new Task(title, categoryIndex, description);
-              this.state.tasks.push(newTask);
+              this.state.items.push(newTask);
               // TODO: Add a task to-do item to your state
               //       using the variables title, categoryIndex,
               //       and description

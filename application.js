@@ -11,10 +11,14 @@ class State {
 
     // TODO: Any other initialization that you need.
   }
-  printNotes() {
-    this.notes.forEach((note, index) => { // [Object]
+  printItems() {
+    this.items.forEach((item, index) => { // [Object]
       // console.log(`${index + 1}. ${note}`);
-      console.log(`${index + 1}. ${note.text}`);
+      if (item.type === 'Note') {
+        console.log(`${index + 1}. ${item.text}`);
+      } else {
+        console.log(`${index + 1}. ${item.title}: ${this.categories[index]}: ${item.description}`);
+      }
     });
   }
 
@@ -55,6 +59,7 @@ class Task {
     this.title = title;
     this.category = category;
     this.description = description;
+    this.type = 'Task';
   }
 }
 

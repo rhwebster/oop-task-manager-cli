@@ -19,7 +19,7 @@ class ManageTasksScreen {
 
     // TODO: Print the incomplete to-do items in the format as
     //       shown in the requirements, 1-based list.
-    this.state.printNotes();
+    this.state.printItems();
 
     console.log();
     console.log("A. Add a new item");

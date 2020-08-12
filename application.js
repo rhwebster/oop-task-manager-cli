@@ -7,15 +7,28 @@ class State {
   constructor(filePath) {
     this.filePath = filePath;
     this.notes = [];
-    this.categories = [];
+    this.categories = [`Category 1`, `Category 2`, `Category 3`, `Category 4`, `Category 5`];
     this.tasks = [];
 
     // TODO: Any other initialization that you need.
   }
   printNotes() {
-    this.notes.forEach((note, index) => { // [Object] 
+    this.notes.forEach((note, index) => { // [Object]
       // console.log(`${index + 1}. ${note}`);
       console.log(`${index + 1}. ${note.text}`);
+    });
+  }
+
+  printCategories() {
+    this.categories.forEach((category, index) => { // [Object]
+      console.log(`${index + 1}. ${category}`);
+    });
+  }
+
+  printTasks() {
+    this.tasks.forEach((task, index) => { // [Object]
+      // console.log(`${index + 1}. ${note}`);
+      console.log(`${index + 1}. ${task.text}`);
     });
   }
 
@@ -34,7 +47,7 @@ class Note {
   constructor(text) {
     this.text = text;
   }
-  
+
 }
 
 class Task {

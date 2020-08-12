@@ -92,8 +92,6 @@ class AddItemScreen {
           // TODO: Add a note to-do item to your state
           //       using the variable note
           // TODO: Save the state
-          const someNote = new Note(note);
-          this.state.notes.push(someNote);
           const screen = new ManageTasksScreen(this.rl, this.state);
           screen.show();
         });

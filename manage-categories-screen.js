@@ -21,6 +21,8 @@ class ManageCategoriesScreen {
     // TODO: Print all five category names with a one-based index
     //       like in the screen mockup in the project description.
 
+    this.state.printCategories();
+
     console.log();
     console.log("X. Go to main screen");
     console.log();

@@ -92,7 +92,8 @@ class AddItemScreen {
           // TODO: Add a note to-do item to your state
           //       using the variable note
           // TODO: Save the state
-
+          const someNote = new Note(note);
+          this.state.notes.push(someNote);
           const screen = new ManageTasksScreen(this.rl, this.state);
           screen.show();
         });
@@ -130,3 +131,4 @@ exports.AddItemScreen = AddItemScreen;
 
 // Requires at bottom to prevent circular dependencies problems in node
 const { ManageTasksScreen } = require('./manage-task-screen');
+const { Note } = require('./application');

@@ -109,7 +109,7 @@ class AddItemScreen {
             const categoryName = this.state.categories[categoryIndex];
             this.printTaskUi3(title, categoryName);
             this.rl.question("> ", description => {
-              const newTask = new Task(title, categoryIndex, description);
+              const newTask = new Task(title, categoryName, description);
               this.state.items.push(newTask);
               // TODO: Add a task to-do item to your state
               //       using the variables title, categoryIndex,

@@ -17,7 +17,7 @@ class State {
       if (item.type === 'Note') {
         console.log(`${index + 1}. ${item.text}`);
       } else {
-        console.log(`${index + 1}. ${item.title}: ${this.categories[index]}: ${item.description}`);
+        console.log(`${index + 1}. ${item.title}: ${item.category} : ${item.description}`);
       }
     });
   }

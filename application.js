@@ -7,17 +7,24 @@ class State {
   constructor(filePath) {
     this.filePath = filePath;
     this.items = [];
-    this.categories = [`Category 1`, `Category 2`, `Category 3`, `Category 4`, `Category 5`];
+    this.categories = [`Category 1`,
+                       `Category 2`,
+                       `Category 3`,
+                       `Category 4`,
+                       `Category 5`,
+    ];
 
     // TODO: Any other initialization that you need.
   }
   printItems() {
     this.items.forEach((item, index) => { // [Object]
       // console.log(`${index + 1}. ${note}`);
-      if (item.type === 'Note') {
-        console.log(`${index + 1}. ${item.text}`);
-      } else {
+      if (item.completed === 'N') {
+        if (item.type === 'Note') {
+          console.log(`${index + 1}. ${item.text}`);
+        } else {
         console.log(`${index + 1}. ${item.title}: ${item.category} : ${item.description}`);
+        }
       }
     });
   }
@@ -25,13 +32,6 @@ class State {
   printCategories() {
     this.categories.forEach((category, index) => { // [Object]
       console.log(`${index + 1}. ${category}`);
-    });
-  }
-
-  printTasks() {
-    this.tasks.forEach((task, index) => { // [Object]
-      // console.log(`${index + 1}. ${note}`);
-      console.log(`${index + 1}. ${task.text}`);
     });
   }
 
@@ -50,6 +50,7 @@ class Note {
   constructor(text) {
     this.text = text;
     this.type = 'Note';
+    this.completed = 'N';
   }
 
 }
@@ -60,6 +61,7 @@ class Task {
     this.category = category;
     this.description = description;
     this.type = 'Task';
+    this.completed = 'N';
   }
 }
 

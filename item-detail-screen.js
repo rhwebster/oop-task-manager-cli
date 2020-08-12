@@ -55,8 +55,7 @@ class ItemDetailScreen {
     console.log("hit \"Enter\" to return to the list screen.");
     this.rl.question("> ", answer => {
       if (answer === "C") {
-        // TODO: Mark the item as complete
-        // TODO: Save the application state
+        this.completed = "C"
 
       }
       const screen = new ManageTasksScreen(this.rl, this.state);

@@ -37,7 +37,7 @@ class EditCategoryScreen {
       //       in the variable this.categoryIndex with the
       //       value in the newCategoryName variable.
       // TODO: Save the state
-      this.state.categories(this.categoryIndex, answer);
+      this.state.categories[this.categoryIndex] = newCategoryName;
       new ManageCategoriesScreen(this.rl, this.state).show();
     });
   }

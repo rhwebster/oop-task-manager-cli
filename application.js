@@ -46,14 +46,16 @@ class State {
 class Note {
   constructor(text) {
     this.text = text;
+    this.type = 'Note';
   }
 
 }
 
 class Task {
-  constructor(title, category) {
-    this.title =title;
+  constructor(title, category, description) {
+    this.title = title;
     this.category = category;
+    this.description = description;
   }
 }
 

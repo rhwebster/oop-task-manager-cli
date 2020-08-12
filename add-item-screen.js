@@ -106,8 +106,10 @@ class AddItemScreen {
             //       value to the category name
             const categoryName = "";
 
-            this.printTaskUi3(title, categoryName);
+            this.printTaskUi3(title, categoryIndex);
             this.rl.question("> ", description => {
+              const newTask = new Task(title, categoryIndex, description);
+              this.state.tasks.push(newTask);
               // TODO: Add a task to-do item to your state
               //       using the variables title, categoryIndex,
               //       and description
@@ -129,4 +131,4 @@ exports.AddItemScreen = AddItemScreen;
 
 // Requires at bottom to prevent circular dependencies problems in node
 const { ManageTasksScreen } = require('./manage-task-screen');
-const { Note } = require('./application');
+const { Note, Task } = require('./application');

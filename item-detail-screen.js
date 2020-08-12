@@ -36,6 +36,7 @@ class ItemDetailScreen {
   }
 
   show() {
+    // const item = this.state.(this.index);
     // TODO: Determine what kind of item is in the state and
     //       referenced by the value in this.index.
     // TODO: If there is not item referenced by this.index,

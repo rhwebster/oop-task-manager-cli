@@ -19,6 +19,7 @@ class ManageTasksScreen {
 
     // TODO: Print the incomplete to-do items in the format as
     //       shown in the requirements, 1-based list.
+    this.state.printNotes();
 
     console.log();
     console.log("A. Add a new item");
@@ -49,3 +50,4 @@ exports.ManageTasksScreen = ManageTasksScreen;
 const { AddItemScreen } = require('./add-item-screen');
 const { MainScreen } = require('./main-screen');
 const { ItemDetailScreen } = require('./item-detail-screen');
+// const { Note } = require('./application');

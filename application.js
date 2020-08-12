@@ -12,6 +12,12 @@ class State {
 
     // TODO: Any other initialization that you need.
   }
+  printNotes() {
+    this.notes.forEach((note, index) => { // [Object] 
+      // console.log(`${index + 1}. ${note}`);
+      console.log(`${index + 1}. ${note.text}`);
+    });
+  }
 
   // Called from program.js if there is JSON saved
   // in the file pointed to by the value in
@@ -28,6 +34,7 @@ class Note {
   constructor(text) {
     this.text = text;
   }
+  
 }
 
 class Task {
